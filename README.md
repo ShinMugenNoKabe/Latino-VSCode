@@ -36,19 +36,20 @@ En VS Code para usar los snippets, escribimos el desencadenador deseado y presio
 | si             | si condicional                          | si condicion #codigo fin                        |
 | sino           | si sino condicional                     | si condicion #codigo sino #codigo fin           |
 | osi            | si osi sino condicional                 | si condicion #codigo osi #codigo #sino #codigo  |
-| caso           | caso condicional(Which Case1,case2)     | elegir(sentencia)caso1,caso2,caso3,defento,fin  |
-| mien           | ciclo mientras                          | mientras condition #codigo fin                  |
-| rep            | ciclo repetir                           | repetir #codigo hasta condicion                 |
-| des            | ciclo desde                             | desde ( i = 0; i < 10; i++) #codigo fin         |
+| caso           | caso condicional(Which Case1,case2)     | elegir(sentencia)caso1,caso2,caso3,defecto,fin  |
+| mien           | condición mientras                      | mientras condition #codigo fin                  |
+| rep            | condición repetir                       | repetir #codigo hasta condicion                 |
+| des            | condición desde                         | desde (i = 0; i < 10; i++) #codigo fin          |
+| rango          | condición rango                         | para elemento en rango(fin) #codigo fin         |
 | fun            | funcion                                 | funcion nombre_funcion (argumentos) #codigo fin |
 | ret            | retorno                                 | retorno valor                                   |
 | esc            | escribir                                | escribir("mensaje")                             |
 | imp            | imprimir                                | imprimir("mensaje")                             |
 | impf           | imprimirf                               | imprimirf("%s\n", variable)                     |
-| inc            | incluir                                 | incluir "modulo"                                |
+| inc            | incluir                                 | incluir ("modulo")                              |
 | encabezado     | encabezado                              | genera un encabezado de código comentado        |
 
->Alternativamente, presione `Ctrl` +` Space` (Windows, Linux) o `Cmd` +` Space` (OSX) para activar los snippets desde el editor.
+>Alternativamente, presione `Ctrl` +`Space` (Windows, Linux) o `Cmd` +`Space` (OSX) para activar los snippets desde el editor.
 
 # Reporte de errores
 Cualquier error lo puedes reportar en: https://github.com/MelvinG24/Latino-VS/issues

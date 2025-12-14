@@ -101,6 +101,15 @@
         ],
         "description": "Condicional: Repetir (Until Loop)"
     },
+    "Rango": {
+        "prefix": "rango",
+        "body": [
+            "para elemento en rango(${1:fin})",
+            "\t${0:#codigo}",
+            "fin"
+        ],
+        "description": "Condicional: Rango (Range)"
+    },
     "Elegir Caso": {
         "prefix": "caso",
         "body": [
