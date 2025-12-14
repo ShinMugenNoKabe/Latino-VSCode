@@ -94,7 +94,7 @@
             {
                 "type": "latino",
                 "label": "Latino Debug",
-                "program": "C:/Program Files/Latino/bin/latino.exe",
+                "program": "C:/Program Files/Latino/latino.exe",
                 "runtime": "latino.exe",
                 "languages": ["latino", "Latino"]
             }

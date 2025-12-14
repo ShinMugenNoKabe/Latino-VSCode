@@ -7,7 +7,7 @@ const provider2 = require("./provider");
 const vscode    = require("vscode");
 const OS        = require("os");
 
-const rutaDefault = (OS.platform() == 'win32') ? "C:/Program Files/Latino/bin/latino.exe" : "/usr/local/bin/latino";
+const rutaDefault = (OS.platform() == 'win32') ? "C:/Program Files/Latino/latino.exe" : "/usr/local/bin/latino";
 let ruta        = rutaDefault.toString();
 let unSave      = false;
 
