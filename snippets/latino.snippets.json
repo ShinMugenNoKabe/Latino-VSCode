@@ -1,10 +1,10 @@
 {
-    "Retorno": {
+    "Retornar": {
         "prefix": "ret",
         "body": [
-            "retorno ${0:valor}"
+            "retornar ${0:valor}"
         ],
-        "description": "Comando: Retorno (Return)"
+        "description": "Comando: Retornar (Return)"
     },
     "Incluir": {
         "prefix": "inc",

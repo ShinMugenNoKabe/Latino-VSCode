@@ -42,7 +42,7 @@ En VS Code para usar los snippets, escribimos el desencadenador deseado y presio
 | des            | condición desde                         | desde (i = 0; i < 10; i++) #codigo fin          |
 | rango          | condición rango                         | para elemento en rango(fin) #codigo fin         |
 | fun            | funcion                                 | funcion nombre_funcion (argumentos) #codigo fin |
-| ret            | retorno                                 | retorno valor                                   |
+| ret            | retornar                                | retornar valor                                  |
 | esc            | escribir                                | escribir("mensaje")                             |
 | imp            | imprimir                                | imprimir("mensaje")                             |
 | impf           | imprimirf                               | imprimirf("%s\n", variable)                     |

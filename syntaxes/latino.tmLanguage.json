@@ -41,7 +41,7 @@
             "description": "Marcador de numeros"
         }, {
             "name": "keyword.control.latino",
-            "match": "(incluir|retorno|retornar|ret|error|romper|continuar)"
+            "match": "(incluir|retornar|ret|error|romper|continuar)"
         }, {
             "name": "constant.language.latino",
             "match": "(escribir|imprimirf|imprimir|poner|global)"
