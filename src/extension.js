@@ -117,18 +117,18 @@ function activate(context) {
         provideTerminalProfile(token) {
             return {
                 options: {
-                    name: 'Latino Terminal',
+                    name: 'Terminal de Latino',
                     shellPath: ruta.toString()
                 }
             };
         }
     }));
 
-    context.subscriptions.push(vscode.commands.registerCommand('latino.correr', () => {
+    context.subscriptions.push(vscode.commands.registerCommand('latino.ejecutar', () => {
         if (unSave) {
-            vscode.window.showErrorMessage('Error! El archivo no a sido guardado...');
+            vscode.window.showErrorMessage('Error! El archivo no ha sido guardado. Guarde sus cambios antes de ejecutar Latino.');
         } else {
-            vscode.window.createTerminal('Latino Terminal', ruta.toString(), '${file}').show();
+            vscode.window.createTerminal('Terminal de Latino', ruta.toString(), '${file}').show();
         }
     }));
 
@@ -140,16 +140,16 @@ function activate(context) {
     // btnBug.text         = "$(debug)";
     // btnBug.command      = 'latino.debug';
 
-    let btnCorrer       = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
-    btnCorrer.text      = '$(run) Ejecutar Latino',
-    btnCorrer.command   = 'latino.correr';
+    let btnEjecutar       = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
+    btnEjecutar.text      = '$(run) Ejecutar Latino',
+    btnEjecutar.command   = 'latino.ejecutar';
 
-    context.subscriptions.push(btnConf/*,btnBug*/, btnCorrer);
+    context.subscriptions.push(btnConf/*,btnBug*/, btnEjecutar);
     context.subscriptions.push(provider1, provider2);
 
     btnConf.show();
     // btnBug.show();
-    btnCorrer.show();
+    btnEjecutar.show();
 }
 
 exports.activate = activate;

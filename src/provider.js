@@ -10,12 +10,12 @@ const provider1 = vscode.languages.registerCompletionItemProvider('latino', {
         const libCadena             = new vscode.CompletionItem('cadena');
         libCadena.kind              = vscode.CompletionItemKind.Field;
         libCadena.commitCharacters  = ['.'];
-        libCadena.documentation     = new vscode.MarkdownString('Libreria Cadena,contiene las funcionas para manipular las cadenas<string> en Lation');
+        libCadena.documentation     = new vscode.MarkdownString('Libreria cadena, contiene las funcionas para manipular las cadenas<string> en Latino');
 
         const libDic                = new vscode.CompletionItem('dic');
         libDic.kind                 = vscode.CompletionItemKind.Field;
         libDic.commitCharacters     = ['.'];
-        libDic.documentation        = new vscode.MarkdownString("Libreria dic, nos permite manipular los diccionarios en Lation");
+        libDic.documentation        = new vscode.MarkdownString("Libreria dic, nos permite manipular los diccionarios en Latino");
 
         const libLista              = new vscode.CompletionItem('lista');
         libLista.kind               = vscode.CompletionItemKind.Field;

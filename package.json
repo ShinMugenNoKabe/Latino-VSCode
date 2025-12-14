@@ -45,7 +45,7 @@
     "main": "./src/extension.js",
     "activationEvents": [
         "onLanguage:latino",
-        "onCommand:latino.correr",
+        "onCommand:latino.ejecutar",
         "onCommand:latino.debug",
         "onCommand:latino.config",
         "workspaceContains:**/.latVSCodeConfig",
@@ -77,15 +77,15 @@
                 "category": "debuging"
             },
             {
-                "command": "latino.correr",
-                "title": "Correr Latino",
+                "command": "latino.ejecutar",
+                "title": "Ejecutar Latino",
                 "category": "debugin",
                 "icon": "$(run)"
             }
         ],
         "keybindings": [
             {
-                "command": "latino.correr",
+                "command": "latino.ejecutar",
                 "key": "ctrl+alt+r",
                 "mac": "cmd+alt+r"
             }
@@ -109,7 +109,7 @@
                 {
                     "id": "terminalTest.terminal-profile",
                     "icon": "terminal",
-                    "title": "Latino Terminal"
+                    "title": "Terminal de Latino"
                 }
             ]
         },
@@ -117,7 +117,7 @@
             "editor/title": [
                 {
                     "when": "resourceLangId == latino",
-                    "command": "latino.correr",
+                    "command": "latino.ejecutar",
                     "group": "navigation"
                 }
             ]
@@ -148,7 +148,7 @@
                 "description": "De sus primeros pasos para configurar Latino en VSCode",
                 "steps": [
                     {
-                        "id": "latinocorrer",
+                        "id": "latinoejecutar",
                         "title": "Latino binario",
                         "description": "Este paso es para configurar la ruta donde se ubica el binario de Latino en su sistema\n[Buscar Binario](command:latino.config)",
                         "media": {
