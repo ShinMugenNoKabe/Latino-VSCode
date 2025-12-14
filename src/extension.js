@@ -7,7 +7,11 @@ const provider2 = require("./provider");
 const vscode    = require("vscode");
 const OS        = require("os");
 
-const rutaDefault = (OS.platform() == 'win32') ? "C:/Program Files/Latino/latino.exe" : "/usr/local/bin/latino";
+const NOMBRE_TERMINAL_LATINO = "Terminal de Latino";
+
+const ES_WINDOWS = OS.platform() == 'win32';
+
+const rutaDefault = ES_WINDOWS ? "C:/Program Files/Latino/latino.exe" : "/usr/local/bin/latino";
 let ruta        = rutaDefault.toString();
 let unSave      = false;
 
@@ -117,7 +121,7 @@ function activate(context) {
         provideTerminalProfile(token) {
             return {
                 options: {
-                    name: 'Terminal de Latino',
+                    name: NOMBRE_TERMINAL_LATINO,
                     shellPath: ruta.toString()
                 }
             };
@@ -127,9 +131,27 @@ function activate(context) {
     context.subscriptions.push(vscode.commands.registerCommand('latino.ejecutar', () => {
         if (unSave) {
             vscode.window.showErrorMessage('Error! El archivo no ha sido guardado. Guarde sus cambios antes de ejecutar Latino.');
-        } else {
-            vscode.window.createTerminal('Terminal de Latino', ruta.toString(), '${file}').show();
+            return;
         }
+
+        // Buscamos si ya se ha creado el terminal anteriormente
+        // Si se ha creado ya, lo reutilizamos
+        let terminalLatino = vscode.window.terminals.find(t => t.name === NOMBRE_TERMINAL_LATINO);
+
+        if (!terminalLatino) {
+            terminalLatino = vscode.window.createTerminal({
+                name: NOMBRE_TERMINAL_LATINO,
+            });
+        }
+
+        terminalLatino.show();
+
+        const rutaFichero = vscode.window.activeTextEditor?.document.fileName;
+        let comandoLatino = `"${ruta}" "${rutaFichero}"`;
+
+        if (ES_WINDOWS) comandoLatino = `& ${comandoLatino}`; // Sintaxis de PowerShell
+
+        terminalLatino.sendText(comandoLatino);
     }));
 
     let btnConf         = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
